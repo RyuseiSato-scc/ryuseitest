@@ -15,7 +15,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://0hc093rawc.execute-api.ap-northeast-1.amazonaws.com/default/", {
+      const response = await fetch("https://0hc093rawc.execute-api.ap-northeast-1.amazonaws.com/dev/", {
         method: 'POST',  // Using POST to send data to the Lambda function
         headers: {
           'Content-Type': 'application/json',  // Ensure we're sending JSON
