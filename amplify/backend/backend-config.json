@@ -1,1 +1,43 @@
-{}
+{
+  "api": {
+    "ryuseiapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ryuseilambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "ryuseilambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_ryuseilambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ryuseilambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_ryuseilambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ryuseilambda"
+        }
+      ]
+    }
+  }
+}
