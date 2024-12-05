@@ -1,38 +1,144 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* 下部余白を追加 */
+}
+
+.components-wrapper {
+  position: relative;
+  display: flex;
+  gap: 20px; /* コンポーネント間のスペースを調整 */
+}
+
+.return-container {
+  display: flex;
+  width: 400px; /* 初期幅 */
+  height: 100px;
+  margin-bottom: 0px; /* 下部余白を追加 */
+  
+}
+
+.bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* 初期幅 */
+  height: 0px;
+  margin-bottom: 0px; /* 下部余白を追加 */
+}
+
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+
+.form-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item-agree {
+  display: flex;
+  align-items: flex-start; /* チェックボックスを上に揃える */
+  justify-content: flex-start; /* 水平方向に左寄せ */
+  margin-top: 20px; /* 上部にスペースを追加 */
+}
+
+.grid-item-agree input[type="checkbox"] {
+  transform: scale(1.5); /* チェックボックスを1.5倍に拡大 */
+  margin-right: 10px; /* チェックボックスとラベルの間にスペース */
+  margin-top: 20px; /* チェックボックスの位置を少し下げる */
+}
+
+.grid-item-agree label {
+  font-size: 18px; /* ラベルのフォントサイズを大きく */
+  cursor: pointer; /* クリック可能であることを示す */
+  display: inline-block;
+  vertical-align: top; /* ラベルをチェックボックスの上に揃える */
+}
+
+
+
+.grid-item label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.grid-item input,
+.grid-item select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.grid-item.full-width {
+  grid-column: span 2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-item.register-delete {
+  grid-column: span 10;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  padding: 10px 20px;
+  font-size: 16px;
   color: white;
+  background-color: #fbfbfb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #ececec;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.remarks-input {
+  width: 350px; /* 横幅を固定 */
+  min-height: 50px; /* 最小高さ */
+  max-height: 300px; /* 必要なら最大高さを指定 */
+  padding: 10px; /* 内側の余白 */
+  border: 1px solid #ccc; /* 枠線 */
+  border-radius: 5px; /* 角丸 */
+  overflow-y: auto; /* 高さを超えた場合は縦スクロールバーを表示 */
+  resize: vertical; /* ユーザーが高さを調整可能 */
+  font-size: 16px; /* フォントサイズ */
+  line-height: 1.5; /* 行間を設定 */
+  white-space: pre-wrap; /* 折り返しを有効にする */
+  word-wrap: break-word; /* 古いブラウザ向けに折り返しをサポート */
 }
+
+

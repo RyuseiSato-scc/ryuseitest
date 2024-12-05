@@ -15,7 +15,7 @@
       "function": {
         "ryuseilambda": {
           "deploymentBucketName": "amplify-testryusei-dev-856f0-deployment",
-          "s3Key": "amplify-builds/ryuseilambda-7a724735336641623370-build.zip"
+          "s3Key": "amplify-builds/ryuseilambda-654c7966494e4153332b-build.zip"
         }
       },
       "api": {
